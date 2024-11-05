@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product-preview-design</title>
+</head>
+<style>
+  body{
+    background-color:rgb(248, 248, 205);
+  }
+#main{
+    width: 400px;
+    height: 430px;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0.25);
+    display: block;
+    margin: 20px auto;
+}
+#product_card{
+    width: 80px;
+    height: 90px;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0.25);
+    padding: 3px;
+    margin: 10px;
+    position:relative;
+    bottom:300px;
+}
+#product_card:hover{
+          box-shadow: 0px 0px 10px 0px rgb(55, 148, 206);
+    }
+.big-container{
+    display: flex;
+    justify-content: center;
+}
+.container-quality{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin: 10px 0;
+    }
+.quality-icon{
+        height: 20px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .buy-now{
+      display: block;
+      margin: 10px auto;
+      color: rgb(26, 1, 26);
+      background-color:skyblue;
+      border: none;
+      border-radius: 15px;
+      padding: 6px;
+      text-shadow: 2px 2px 2px rgb(172, 182, 152);
+      font-weight: 900;
+      cursor: pointer;
+    }
+    
+    div{
+      display:inline-block;
+      margin-left: 100px;
+    }
+</style>
+<body>
+  <div class="container">
+<img src="img5.png"id="main"/>
+<button onclick="changeColor()" class="buy-now">See more Similar Images</button>
+</div>
+<div class="big-container">
+        <img src="img1.png" alt="mobile" id="product_card" onclick="MoveImage(1)">
+        <img src="img2.png" alt="mobile" id="product_card" onclick="MoveImage(2)">
+        <img src="img3.png" alt="mobile" id="product_card" onclick="MoveImage(3)">
+        <img src="img4.png" alt="mobile" id="product_card" onclick="MoveImage(4)">
+        <img src="img5.png" alt="mobile" id="product_card" onclick="MoveImage(5)">     
+</div>
+    <script>
+
+function MoveImage(num){
+const mainImage = document.getElementById('main');
+  if(num == 1){
+    mainImage.src = "img1.png";
+  }
+  else if(num == 2){
+    mainImage.src = "img2.png";
+  }
+  else if(num == 3){
+    mainImage.src = "img3.png";
+  }
+  else if(num == 4){
+    mainImage.src = "img4.png";
+  }
+  else if(num == 5){
+    mainImage.src = "img5.png";
+  }
+}
+    </script>
+</body>
+</html>
